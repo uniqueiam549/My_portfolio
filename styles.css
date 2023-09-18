@@ -534,7 +534,7 @@ top: -45px;
     justify-content:space-between;
     /* align-items: center; */
     position: relative;
-    /* gap: 2rem; */
+    gap: 2rem;
     /* background-color: aqua; */
 }
 
