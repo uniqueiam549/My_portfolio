@@ -1,0 +1,707 @@
+@import url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:wght@300&display=swap");
+
+/* @font-face {
+    font-family: myFont;
+    src: url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:wght@300&display=swap");
+} */
+
+div{
+    font-family: myFont;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam Pro" sans-serif;
+}
+
+:root{
+    --bgOrange: #e84949;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    width: 1250px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 1rem;
+}
+
+.logo{
+    width: 80px;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.logo-text{
+    margin-left: -1.2rem;
+    font-size: 28px;
+}
+
+.nav-items{
+    display: flex;
+    gap: 2rem;
+    padding: 0 4rem;
+}
+
+.nav-items div{
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-items a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-items div:hover{
+    font-weight: bold;
+    transition: 0.8s;
+}
+
+.hero-section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+    margin: 4rem auto;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+
+    overflow-y: hidden;
+}
+
+.faded-text{
+    position: absolute;
+    user-select: none;
+    font-size: 7rem;
+    color: rgb(231, 231, 231);
+
+    bottom: -16%;
+    left: -5%;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+.hero-section-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hero-section-heading{
+    font-size: 35px;
+    color: #343d68;
+    font-weight: 500;
+}
+
+.role{
+    color: #4e45d5;
+    font-weight: 800;
+}
+
+.hero-section-descriptio{
+    margin: 1rem;
+    width: 70%;
+    font-weight: 500;
+}
+
+.btn-pnk{
+
+    position: relative;
+    border: 3px solid transparent;
+    width: fit-content;
+    background-color: #e84949;
+    padding: 0.8rem 2.3rem;
+    color: white;
+    font-size: 18px;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+
+    z-index: 0;
+    /* background-color: var(--bgOrange);
+    width: fit-content;
+    color: white;
+    padding: 0.8rem 2.3rem;
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-weight: 500;
+    border: solid 3px transparent;
+    position: relative;
+    z-index: 1; */
+
+}
+/* ::befoe is a psudo element[Thats why we are using double colons(::)] */
+/* To place content berore the main content(here the main content is "Hire Me") */
+.btn-pnk::before{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 1s;
+    z-index: -1;
+}
+
+.btn-pnk:hover::before{
+    transform: scaleX(1);
+}
+
+.btn-pnk:hover{
+    color: #0f0f0f;
+    transition: 0.5s;
+}
+
+.hero-section-right{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    z-index: 1;
+}
+
+.user-image{
+    padding: 2.5rem;
+    filter: grayscale(1);
+
+    transition: all 1s;
+
+    animation: scaleImage 5s linear infinite;
+
+    /* z-index: -1; */
+}
+
+@keyframes scaleImage {
+    
+
+    0%{
+        filter: grayscale(1);
+        transform: scale(1);
+    }
+
+    50%{
+        filter: grayscale(0);
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    100%{
+        filter: grayscale(1);
+        transform: scale(1);
+        
+    }
+}
+
+.icon-dots{
+    transition: all 1s;
+    bottom: -1rem;
+    right: 0;
+    animation: dotAnimation 5s linear infinite;
+}
+
+@keyframes dotAnimation {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+.icon-cube{
+    transition: all 1s;
+    top: -0.8em;
+    right: 1em;
+    animation: cubeAnimation 5s  infinite;
+}
+
+@keyframes cubeAnimation {
+    0%{
+        transform: rotatey(0deg) translateY(0px);
+    }
+
+    50%{
+        transform: rotatey(180deg)translateY(-12px);
+    }
+
+    100%{
+        transform: rotatey(360deg)translateY(0px);
+    }
+
+}
+
+.icon-circle{
+    transition: all 1s;
+    bottom: 0;
+    left: 0;
+    animation: circleAnimation 5s  linear infinite;
+}
+
+@keyframes circleAnimation {
+   
+
+    50%{
+        left: 5%;
+        bottom: 5%;
+    }
+
+    
+
+}
+
+.icon-zigzag{
+    transition: all 1s;
+    top: 1.5rem;
+    left: -0.3rem;
+    animation: zigzagAnimation 5s  ease-in infinite;
+}
+
+@keyframes zigzagAnimation {
+
+    50%{
+        top: 2%;
+        left: 5%;
+    }
+}
+
+.icon-plus{
+    transition: all 1s;
+    top: -0.8em;
+    left: 50%;
+    animation: plusAnimation 5s  infinite;
+}
+
+@keyframes plusAnimation {
+
+    50%{
+        top:3%;
+        left: 48%;
+    }
+
+}
+
+.project-section{
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+}
+
+.page-heading{
+    color: var(--bgOrange);
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+.project-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+
+}
+
+.project-card{
+    width: 90%;
+    height: 550px;
+    background-image: url(./projects/Project1.png);
+    background-size: cover;
+    /* if the image is small the to cover the background it repeats the image */
+    /* To prevent the situation we need to do the below line */
+    background-repeat: no-repeat;
+
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+    /* z-index: 0; */
+}
+
+/* To apply Black tint of black filter*/
+.project-card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    transform: scaleX(1);
+}
+
+/* Creating filter effect */
+.project-card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #343d68,#343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+}
+
+.project-card:hover::before{
+    transform: scaleX(1);
+}
+
+.project-number{
+    position: absolute;
+    font-size: 200px;
+    font-weight: 600;
+    color: white;
+    z-index: 1;
+    /* display:none; */
+    opacity: 0;
+}
+.project-card:hover .project-number{
+    /* display: ; */
+    opacity: 1;
+}
+
+.project-number-right{
+right: -40px;
+top: -45px;
+}
+
+.project-number-left{
+    left: -40px;
+    top: -45px;
+}
+
+.project-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem;
+    bottom: 20%;
+    gap: 1rem;
+    z-index: 5;
+
+    transition: 0.5s;
+}
+
+.project-content-left{
+    left: 10%;
+}
+
+.project-content-right{
+    right: 10%;
+}
+
+.project-skills-Container{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-skill{
+    width: 40px;
+}
+
+.project-heading{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-sunheading{
+    width: 80%;
+    font-style: italic;
+}
+
+.btn-group{
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.btn-project{
+    border: none;
+}
+.icon{
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+.icon:hover{
+    color: var(--bgOrange);
+
+}
+
+/* .project-content{
+    transform: scale(2);
+} */
+
+.project-card:hover .project-content{
+    transform: scale(1.2);
+}
+
+#project2{
+    background-image: url(./projects/Project2.png);
+}
+
+#project3{
+    background-image: url(./projects/Project3.png);
+}
+
+#project4{
+    background-image: url(./projects/Project4.png);
+}
+
+
+
+.skills-container{
+    position: relative;
+    display: flex;
+    padding: 5rem;
+    margin: 10rem auto;
+    gap: 30px;
+
+    /* background-color: #e84949; */
+}
+
+.skill-fade-text{
+    position: absolute;
+    user-select: none;
+    font-size: 15rem;
+    font-size: bold;
+    color: rgb(231, 231, 231);
+
+    bottom: -34.5%;
+    right: -25%;
+    font-weight: bold;
+    transition: all 3s;
+}
+
+.skill-container-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 0px;
+
+    /* background-color: #4e45d5; */
+
+}
+
+.skill-container-right{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    justify-content:space-between;
+    /* align-items: center; */
+    position: relative;
+    /* gap: 2rem; */
+    /* background-color: aqua; */
+}
+
+
+.blob-style{
+    position: absolute;
+    z-index: -1;
+    top: 15%;
+    left: 20%;
+    animation: blobAnimation 3s linear infinite;
+}
+
+
+@keyframes blobAnimation {
+    50%{
+        top: 16%;
+        left: 0%;
+    }
+}
+
+
+.skill-logo{
+    /* position: absolute; */
+    width: 90px;
+    z-index: 1;
+    transition: all 0.5s;
+}
+
+
+.skill-logo:hover{
+    transform: scale(1.2);
+}
+
+
+.skill-heading{
+    font-size: 50px;
+    font-style: bold;
+    color: var(--bgOrange);
+    line-height: 50px;
+}
+
+
+.caps{
+    font-size: 90px;
+}
+
+
+.skill-sbuheading{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+
+
+.skill-sbuheading p{
+    margin: 15px 0;
+}
+
+.contactus-form-container{
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+}
+
+.contactus-heading{
+    font-size: 5em;
+    color: var(--bgOrange);
+    padding-top: 2rem;
+}
+
+.contactus-subheading{
+    font-size: 3rem;
+    color: #343d68aa;
+}
+
+.contactus-form-container{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-field-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 30px; */
+    width: 100%;
+    margin: 2rem;
+}
+
+
+.formfield{
+    width: 875px;
+    height: 42px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #1f1f1f;
+    font-weight: 500;
+    border: none;
+    margin-top: 17px;
+}
+
+.formfield-textarea{
+    height: auto;
+    padding-top: 1rem;
+}
+
+#submit-btn
+{
+    border: none;
+    font-size: 1.4 rem;
+    margin-top: 17px;
+}
+
+#submit-btn:hover{
+    scale:0.9;
+}
+
+.submit-icon{
+    padding: 0 1.5rem;
+}
+
+.footer-section{
+    position: relative;
+    bottom: 0;
+    margin-top: -1px;
+    background-color: #343d68;
+    padding: 5rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-faded-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #535c87;
+    user-select: none;
+    font-size: 5em;
+}
+
+.link-wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 1.2rem;
+
+}
+
+.link-wrapper div a{
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.link-wrapper div a:hover{
+    color: var(--bgOrange);
+    
+}
+
+.icon-wrapper{
+    display: flex;
+    gap: 1rem;
+    
+}
