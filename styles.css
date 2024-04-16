@@ -5,6 +5,10 @@
     src: url("https://fonts.googleapis.com/css?family=Be+Vietnam+Pro:wght@300&display=swap");
 } */
 
+html{
+    scroll-behavior: smooth;
+}
+
 div{
     font-family: myFont;
 }
@@ -52,11 +56,7 @@ div{
 }
 
 .logo-text{
-<<<<<<< HEAD
-    margin-left: -1.2rem;
-=======
     margin-left: -0.75rem;
->>>>>>> c1e1610887a1c45322688ede605fcaaf23216717
     font-size: 28px;
 }
 
@@ -87,7 +87,7 @@ div{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    overflow-x: hidden;
     gap: 5rem;
     margin: 4rem auto;
     padding: 0 1rem;
@@ -102,7 +102,7 @@ div{
     font-size: 7rem;
     color: rgb(231, 231, 231);
 
-    bottom: -16%;
+    bottom: -8%;
     left: -5%;
     font-weight: bold;
     transition: all 3s;
@@ -196,11 +196,8 @@ div{
 
 .user-image{
     padding: 2.5rem;
-<<<<<<< HEAD
-=======
     
     object-fit: cover;
->>>>>>> c1e1610887a1c45322688ede605fcaaf23216717
     filter: grayscale(1);
 
     transition: all 1s;
@@ -325,6 +322,10 @@ div{
 
 }
 
+.ScrollDown{
+    scroll-behavior: smooth;
+}
+
 .project-section{
     background-color: rgb(231, 231, 231);
     margin-top: 4rem;
@@ -350,11 +351,7 @@ div{
 .project-card{
     width: 90%;
     height: 550px;
-<<<<<<< HEAD
-    background-image: url(./projects/Project1.png);
-=======
     background-image: url(./projects/Car_Rental_Overview\(1\).jpeg);
->>>>>>> c1e1610887a1c45322688ede605fcaaf23216717
     background-size: cover;
     /* if the image is small the to cover the background it repeats the image */
     /* To prevent the situation we need to do the below line */
@@ -492,7 +489,7 @@ top: -45px;
 }
 
 #project2{
-    background-image: url(./projects/Project2.png);
+    background-image: url(./projects/project2_bootstarp.jpg);
 }
 
 #project3{
@@ -547,11 +544,7 @@ top: -45px;
     justify-content:space-between;
     /* align-items: center; */
     position: relative;
-<<<<<<< HEAD
-    gap: 2rem;
-=======
     /* gap: 2rem; */
->>>>>>> c1e1610887a1c45322688ede605fcaaf23216717
     /* background-color: aqua; */
 }
 
@@ -576,8 +569,12 @@ top: -45px;
 .skill-logo{
     /* position: absolute; */
     width: 90px;
+    height: 90px;
     z-index: 1;
     transition: all 0.5s;
+    flex: 0 0 calc(25% ); /* Adjust 20% as needed for your column width */
+    margin: 10px; /* Space between items */
+    text-align: center;
 }
 
 
@@ -721,8 +718,4 @@ top: -45px;
     display: flex;
     gap: 1rem;
     
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> c1e1610887a1c45322688ede605fcaaf23216717
